@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     
-    cursor: url("../../dist/Assets/cursor.png"), auto;
+    cursor: url("../Assets/cursor.png"), auto;
 }
 
 :root {
@@ -110,7 +110,7 @@ body {
     
 
     background-color: var(--primary);
-    background-image: url("../../dist/Assets/box-grass.png");
+    background-image: url("../Assets/box-grass.png");
 
     border-radius: 25px;
     box-shadow: inset -3px -3px rgb(0,0,0,0.5), inset 3px 3px rgb(256,256,256,0.8);
