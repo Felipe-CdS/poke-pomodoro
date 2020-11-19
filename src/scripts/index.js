@@ -38,22 +38,22 @@ function clock(){
     if(clockMinutes < 0){
         clockLock = false;
         clearInterval(clockInterval);
+        playAlert();
 
         if(clockMode == "hunting"){
             clockMode ="healing";
             document.getElementById("timer").innerHTML ="5:00";
             document.getElementById("healing").style.display = "initial";
             document.getElementById("hunting").style.display = "none";
+            
+            addNewPokemon(Math.floor(Math.random() *152));
         }
         else{
             clockMode ="hunting";
-            document.getElementById("timer").innerHTML ="25:00";
-            
+            document.getElementById("timer").innerHTML ="25:00";            
             document.getElementById("hunting").style.display = "initial";
             document.getElementById("healing").style.display = "none";
         }
-
-        addNewPokemon(Math.floor(Math.random() *152));
     }
 }
 
@@ -70,9 +70,18 @@ function startClock(){
             clockSeconds = 0;
             clockLock = true;
             clockInterval = setInterval(clock, 1000);
-        }
-        
+        } 
     } 
+}
+
+function playAlert(){
+    if(clockMode == "hunting"){
+        document.getElementById('healing-alert').play();
+    }
+    else{
+        document.getElementById('hunting-alert').play();  
+    }
+
 }
 
 document.getElementById("start-button").addEventListener("click", startClock);
