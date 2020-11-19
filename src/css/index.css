@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    cursor: url("../../dist/Assets/cursor.png"), auto;
+}
+
+:root {
+    --primary: #E2E2E2;
+    --secondary: #A3A4A6;
+    --tertiary: #0C0D0D;
+    --quartenary: #6E7985;
+    --quinary: #595B5C;
+    --screen: #AFB7BF;
+}
+
+body {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    padding: 3rem;
+    background-color: #FC6963;
+}
+
+#timer {   
+    font-family: 'Press Start 2P', cursive;
+    font-size: 35px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#start-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+
+    border-radius: 10px;
+    border: 5px solid var(--tertiary);
+}
+
+#start-button:hover {
+    background-color: #FC6963;
+}
+
+.pokebox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.pokebox-head{
+    width: 250px;
+    height: 50px;
+
+    margin-right: 40px;
+
+
+    border-radius: 25px 25px 0 0;
+    border: 5px solid var(--tertiary);
+    
+    border-bottom: none;
+
+    overflow: hidden;
+    position: relative;
+
+    padding: 10px;
+}
+
+.pokebox-head img{
+    width: 256px;
+    height: 144px;
+
+    position: relative;
+    top: -120px;
+    left: -10px;
+
+    opacity: 0.8;
+}
+
+
+
+.pokebox-head h1{
+    font-size: 25px;
+
+    text-align: center;
+    color: var(--primary);
+    font-family: 'Press Start 2P', cursive;
+    
+    position: relative;
+    z-index: 1;
+    
+}
+
+.pokebox-body{
+    width: 300px;
+    height: 500px;
+
+    z-index: 1;
+
+    padding: 5px;
+
+    margin-right: 40px;
+    
+
+    background-color: var(--primary);
+    background-image: url("../../dist/Assets/box-grass.png");
+
+    border-radius: 25px;
+    box-shadow: inset -3px -3px rgb(0,0,0,0.5), inset 3px 3px rgb(256,256,256,0.8);
+    border: 5px solid var(--tertiary);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    
+}
+
+.pokebox-body span{
+    width: 15px;
+    height: 15px;
+
+    margin: 15px 7px;
+
+    border-radius: 60%;
+
+    background-color: rgb(0,0,0,0.4);
+}
+

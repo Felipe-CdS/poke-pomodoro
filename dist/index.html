@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Poke Pomodoro</title>
+        <link rel="shortcut icon" href="./Assets/Poké_Ball_icon.svg"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="../src/css/index.css">
+        <link rel="stylesheet" href="../src/css/nintendo-ds.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="pokebox">
+            <div class="pokebox-head">
+                <h1>Pokebox</h1>
+                <img src="Assets/viridian.jpg">
+            </div> 
+            <div class="pokebox-body" id="pokebox-body">
+            
+            </div> 
+        </div>
+        <main class="nintendo-ds">
+            <div class="nindendo-ds-body">
+
+                <section class="top-part">
+                        <div class="squares"></div>
+                        <div class="squares"></div>
+                        <div class="squares"></div>
+                        <div class="squares"></div>
+                    <div class="points">
+                        <span>•••••••</span><br>
+                        <span>•••••••</span><br>
+                        <span>•••••••</span><br>
+                        <span>•••••••</span><br>
+                    </div>
+
+                    <section class="screen">
+                        <div class="glass">
+                            <img id="hunting" src="Assets/hunting.gif">
+                            <img id="healing" src="Assets/healing.gif">
+                        </div>
+                    </section>
+
+                    <div class="points">
+                        <span>•••••••</span><br>
+                        <span>•••••••</span><br>
+                        <span>•••••••</span><br>
+                        <span>•••••••</span><br>
+                    </div>
+                </section>
+
+                <section class="connection">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+
+                <section class="bottom-part">
+                    <section class="left-part">
+                        <button class="button"></button>
+                        <section class="directions">
+                            <span></span>
+                            <button class="top-button"></button>
+                            <button class="right-button"></button>
+                            <button class="bottom-button"></button>
+                            <button class="left-button"></button>
+                        </section>
+
+                    </section>
+                    <section class="center-part">
+                        <div class="glass">
+                            <h1 id="timer"> 25:00</h1>
+                            <button id="start-button">Start</button>
+                        </div>
+                    </section>
+                    <section class="right-part">
+                        <section class="start-select">
+                        <button></button>
+                        <button></button>
+                        </section>
+                        <section class="directions">
+                            <button class="top-button"></button>
+                            <button class="right-button"></button>
+                            <button class="bottom-button"></button>
+                            <button class="left-button"></button>
+                        </section>
+                    </section>
+                    <div class="on-off-1"></div>
+                    <div class="on-off-2"></div>
+                </section>
+                
+            </div>
+        </main>
+        <script src="index.bundle.js"></script>
+        <script src="apirequest.bundle.js"></script>
+    </body>
+</html>
