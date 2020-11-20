@@ -96,6 +96,17 @@ function playAlert(){
     }
 }
 
+function openFaq(){
+    document.getElementById("faq-box-bg").style.display = "initial";
+    document.getElementById("faq-box").style.display = "flex";
+}
+
+
+function closeFaq(){
+    document.getElementById("faq-box-bg").style.display = "none";
+    document.getElementById("faq-box").style.display = "none";
+}
+
 
 function configClock(){
     if(clockLock == false){
@@ -120,6 +131,9 @@ document.getElementById("stop-button").addEventListener("click", pauseClock);
 document.getElementById("config-clock-button").addEventListener("click", configClock);
 document.getElementById("time-pomodoro").addEventListener("change", configClock);
 document.getElementById("time-break").addEventListener("change", configClock);
+
+document.getElementById("open-faq-button").addEventListener("click", openFaq);
+document.getElementById("close-faq-button").addEventListener("click", closeFaq);
 
 
 /*Default Values:*/

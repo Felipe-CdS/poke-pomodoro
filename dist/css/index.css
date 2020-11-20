@@ -85,8 +85,6 @@ body {
     opacity: 0.8;
 }
 
-
-
 .pokebox-head h1{
     font-size: 25px;
 
@@ -116,11 +114,9 @@ body {
 
     overflow-y: auto;
     overflow-x: hidden;
-
-    
 }
 
-.pokebox-body span{
+.pokebox-body .pokemon-icon-span{
     width: 15px;
     height: 15px;
 
@@ -129,6 +125,29 @@ body {
     border-radius: 60%;
 
     background-color: rgb(0,0,0,0.4);
+    background-image: none;
+    position: relative;
+}
+
+.pokebox-body .pokemon-icon-span .pokemon-portrait-span{
+    display: none;
+}
+
+.pokebox-body .pokemon-icon-span:hover .pokemon-portrait-span{
+    display: initial;
+
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    z-index: 5;
+
+    width: 100px;
+    height: 100px;
+
+    background-position: center;
+    background-color: var(--primary);
+    border: 3px solid var(--tertiary);
+    border-radius: 15px;
 }
 
 .configs-box {
@@ -136,23 +155,25 @@ body {
     width: 300px;
     
     background-color: rgb(0,0,0,0.4); 
-
-    padding: 15px;
     text-align: center;
 
     position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .configs-box h1{
     font-family: 'Press Start 2P', cursive;
     font-size: 30px;
     color: var(--primary);
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
 .configs-box .clock-configs {
     height: 120px;
-    width: 100%;
+    width: 90%;
     background-color: rgb(0,0,0,0.4); 
 
     padding: 10px;
@@ -205,7 +226,7 @@ body {
 
 .configs-box .music-configs {
     height: 300px;
-    width: 100%;
+    width: 90%;
     background-color: rgb(0,0,0,0.4); 
 
     padding: 10px;
@@ -231,24 +252,132 @@ body {
     font-size: 15px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
 
-    bottom: 50px;
-    padding: 25px;
+    position: absolute;
+    bottom: 70px;
+}
 
-    position: fixed;
-    bottom: 0;
+.configs-box .footer button {
+    height: 35px;
+    width: auto;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    text-decoration: underline;
+
+    color: var(--primary);
+    background-color: transparent;
+    border: none;
 }
 
 .configs-box .footer a{
     font-size: 20px;
     color: var(--primary);
     margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.configs-box .footer button:hover, a:hover{
+    text-decoration: none;
 }
 
 .configs-box .footer #coffee{
-    width: 50px;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
 }
 
+.configs-box .footer #coffee img{
+    width: 25px;
+    height: 25px;
+}
+
+#faq-box-bg {
+    display: none;
+    position: absolute;
+
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+
+#faq-box {
+    position: absolute;
+    left: 25%;
+
+    z-index: 5;
+    width: 700px;
+    height: 500px;
+
+    background-color: rgba(34, 32, 32, 0.99);
+
+    border: 6px solid var(--tertiary);
+    border-radius: 15px;
+
+    color: var(--primary);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px;
+
+}
+
+#faq-box header {
+    display: flex;
+}
+
+#faq-box header h2{
+    margin-right: 30px;
+}
+
+#faq-box header button{
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+
+
+    font-size: 20px;
+    font-weight: bold;
+
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+
+#faq-box header button:hover{
+    color: var(--quinary);
+}
+
+
+#faq-box .text-div{
+
+    padding: 15px;
+    letter-spacing: normal;
+    text-align: justify;
+
+}
+
+#faq-box .text-div p:last-child{
+    margin: 30px 0;
+}
+
+#faq-box .text-div ul{
+    margin: 0 30px 15px;
+}
+
+#faq-box .text-div img{
+    width: 90px;
+    height: 64px;
+
+    position: absolute;
+    left: 43%;
+    bottom: 20px;
+}
 
