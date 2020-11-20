@@ -161,6 +161,7 @@ body {
     flex-direction: column;
     align-items: center;
 
+    font-family: 'Roboto', sans-serif;
 }
 
 .configs-box h1{
@@ -256,6 +257,8 @@ body {
 
     position: absolute;
     bottom: 70px;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .configs-box .footer button {
@@ -269,6 +272,7 @@ body {
     color: var(--primary);
     background-color: transparent;
     border: none;
+    font-weight: bold;
 }
 
 .configs-box .footer a{
@@ -325,6 +329,7 @@ body {
 
     padding: 15px;
 
+    font-family: 'Roboto', sans-serif;
 }
 
 #faq-box header {
