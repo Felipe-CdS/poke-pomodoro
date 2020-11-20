@@ -97,10 +97,10 @@ function pauseClock(){
 
 function playAlert(){
     if(clockMode == "hunting"){
-        document.getElementById('healing-alert').play();
+        document.getElementById('hunting-alert').play();
     }
     else{
-        document.getElementById('hunting-alert').play();  
+        document.getElementById('healing-alert').play();  
     }
 }
 
