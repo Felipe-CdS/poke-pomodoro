@@ -12,6 +12,14 @@ var clockSeconds = 0;
 var configPomodoroMinutes = 25;
 var configBreakMinutes = 5;
 
+function randomId(){
+    var x = 0;
+    while(x == 0){
+        x = Math.floor(Math.random() * 152);
+    }
+    return x;
+}
+
 function clock(){
     var minutesHolder, secondsHolder;
 
@@ -47,7 +55,7 @@ function clock(){
             document.getElementById("healing").style.display = "initial";
             document.getElementById("hunting").style.display = "none";
             
-            addNewPokemon(Math.floor(Math.random() *152));
+            addNewPokemon(randomId());
         }
         else{
             clockMode ="hunting";

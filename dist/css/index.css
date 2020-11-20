@@ -112,8 +112,7 @@ body {
     box-shadow: inset -3px -3px rgb(0,0,0,0.5), inset 3px 3px rgb(256,256,256,0.8);
     border: 5px solid var(--tertiary);
 
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: visible;
 }
 
 .pokebox-body .pokemon-icon-span{
@@ -138,7 +137,7 @@ body {
 
     position: absolute;
     top: 25px;
-    left: -15px;
+    left: -25px;
     z-index: 5;
 
     width: 100px;
