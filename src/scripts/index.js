@@ -6,10 +6,11 @@ var clockLock = false;
 
 var clockMode = "hunting";
 
-var clockMinutes = 1;
+var clockMinutes = 25;
 var clockSeconds = 0;
 
-
+var configPomodoroMinutes = 25;
+var configBreakMinutes = 5;
 
 function clock(){
     var minutesHolder, secondsHolder;
@@ -42,7 +43,7 @@ function clock(){
 
         if(clockMode == "hunting"){
             clockMode ="healing";
-            document.getElementById("timer").innerHTML ="5:00";
+            document.getElementById("timer").innerHTML = configBreakMinutes + ":00";
             document.getElementById("healing").style.display = "initial";
             document.getElementById("hunting").style.display = "none";
             
@@ -50,7 +51,7 @@ function clock(){
         }
         else{
             clockMode ="hunting";
-            document.getElementById("timer").innerHTML ="25:00";            
+            document.getElementById("timer").innerHTML = configPomodoroMinutes +":00";            
             document.getElementById("hunting").style.display = "initial";
             document.getElementById("healing").style.display = "none";
         }
@@ -60,18 +61,30 @@ function clock(){
 function startClock(){
     if(!clockLock){
         if(clockMode == "hunting"){
-            clockMinutes = 25;
+            clockMinutes = configPomodoroMinutes;
             clockSeconds = 0;
             clockLock = true;
             clockInterval = setInterval(clock, 1000);
         }
         else{
-            clockMinutes = 5;
+            clockMinutes = configBreakMinutes;
             clockSeconds = 0;
             clockLock = true;
             clockInterval = setInterval(clock, 1000);
         } 
     } 
+}
+
+function pauseClock(){
+    clockLock = false;
+    clearInterval(clockInterval);
+
+    if(clockMode == "hunting"){
+        document.getElementById("timer").innerHTML = configPomodoroMinutes + ":00";
+    }
+    else{
+        document.getElementById("timer").innerHTML = configBreakMinutes +":00"; 
+    }
 }
 
 function playAlert(){
@@ -81,8 +94,37 @@ function playAlert(){
     else{
         document.getElementById('hunting-alert').play();  
     }
+}
 
+
+function configClock(){
+    if(clockLock == false){
+        if(configPomodoroMinutes < 60){configPomodoroMinutes = 60}
+        if(configBreakMinutes < 60){configBreakMinutes = 60}
+
+        configPomodoroMinutes = document.getElementById("time-pomodoro").value;
+        configBreakMinutes = document.getElementById("time-break").value;
+
+        if(clockMode == "hunting"){
+            document.getElementById("timer").innerHTML = configPomodoroMinutes + ":00";
+        }
+        else{
+            document.getElementById("timer").innerHTML = configBreakMinutes +":00"; 
+        }
+    }
 }
 
 document.getElementById("start-button").addEventListener("click", startClock);
+document.getElementById("stop-button").addEventListener("click", pauseClock);
+
+document.getElementById("config-clock-button").addEventListener("click", configClock);
+document.getElementById("time-pomodoro").addEventListener("change", configClock);
+document.getElementById("time-break").addEventListener("change", configClock);
+
+
+/*Default Values:*/
 document.getElementById("healing").style.display = "none";
+document.getElementById("time-pomodoro").value = 25;
+document.getElementById("time-break").value = 5;
+document.getElementById("hunting-alert").volume = 0.5;
+document.getElementById("healing-alert").volume = 0.5;

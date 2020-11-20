@@ -78,7 +78,11 @@
                     <section class="center-part">
                         <div class="glass">
                             <h1 id="timer"> 25:00</h1>
-                            <button id="start-button">Start</button>
+                            <div>
+                                <button id="start-button">Start</button>
+                                <button id="stop-button">Reset</button>
+                            </div>
+                            
                         </div>
                     </section>
                     <section class="right-part">
@@ -96,9 +100,29 @@
                     <div class="on-off-1"></div>
                     <div class="on-off-2"></div>
                 </section>
-                
             </div>
         </main>
+
+        <div class="configs-box">
+            <h1>Poke<br/>Pomodoro!</h1>
+            <div class="clock-configs">
+                <h5>Clock Configs:</h5>
+                <div>
+                    <label for="time-pomodoro">Pomodoro:</label>
+                    <input type="number" id="time-pomodoro" step="1" min="1" max="60" name="time_pomodoro">
+                    <label for="time_pomodoro">Short Break:</label>
+                    <input type="number" id="time-break" step="1" min="1" max="60" name="time-break">
+                </div>
+                <button id="config-clock-button">Save!</button>
+            </div>
+            <div class="music-configs">
+                <iframe width="250" height="315" src="https://www.youtube.com/embed/AvhplYM46Fc?autoplay=1" frameborder="0" allow="autoplay;"></iframe>
+            </div>
+            <div class="footer">  
+                <a href="https://github.com/Felipe-CdS"> Felipe Coutinho - Github</a>
+            </div>
+        </div>
+
         <script src="index.bundle.js"></script>
         <script src="apirequest.bundle.js"></script>
     </body>

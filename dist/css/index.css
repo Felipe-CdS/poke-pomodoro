@@ -19,12 +19,14 @@ body {
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     height: 100vh;
-
-    padding: 3rem;
-    background-color: #FC6963;
+    
+    background-image: url("../Assets/wallpaper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #timer {   
@@ -34,18 +36,18 @@ body {
     margin-bottom: 10px;
 }
 
-#start-button {
+#start-button, #stop-button {
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
-    width: 100px;
+    width: 90px;
     height: 40px;
 
     border-radius: 10px;
     border: 5px solid var(--tertiary);
 }
 
-#start-button:hover {
-    background-color: #FC6963;
+#start-button:hover, #stop-button:hover {
+    background-color: var(--quinary);
 }
 
 .pokebox{
@@ -59,8 +61,7 @@ body {
     width: 250px;
     height: 50px;
 
-    margin-right: 40px;
-
+    margin: 0 40px;
 
     border-radius: 25px 25px 0 0;
     border: 5px solid var(--tertiary);
@@ -104,10 +105,7 @@ body {
 
     z-index: 1;
 
-    padding: 5px;
-
-    margin-right: 40px;
-    
+    padding: 5px;    
 
     background-color: var(--primary);
     background-image: url("../Assets/box-grass.png");
@@ -132,4 +130,125 @@ body {
 
     background-color: rgb(0,0,0,0.4);
 }
+
+.configs-box {
+    height: 100vh;
+    width: 300px;
+    
+    background-color: rgb(0,0,0,0.4); 
+
+    padding: 15px;
+    text-align: center;
+
+    position: relative;
+}
+
+.configs-box h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.configs-box .clock-configs {
+    height: 120px;
+    width: 100%;
+    background-color: rgb(0,0,0,0.4); 
+
+    padding: 10px;
+    text-align: center;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.configs-box .clock-configs h5{
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.configs-box .clock-configs div {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.configs-box .clock-configs label {
+    font-size: 15px;
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+.configs-box .clock-configs input {
+    height: 25px;
+    width: 50px;
+    border-radius: 3px;
+    
+    text-align: center;
+}
+
+.configs-box .clock-configs button {
+    height: 25px;
+    width: 50px;
+    margin-top: 10px;
+
+    border-radius: 3px;
+
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.configs-box .music-configs {
+    height: 300px;
+    width: 100%;
+    background-color: rgb(0,0,0,0.4); 
+
+    padding: 10px;
+    text-align: center;
+
+    margin-top: 15px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+
+    overflow: hidden;
+
+}
+
+.configs-box .footer {
+    height: 35px;
+    width: 100%;
+
+    border-radius: 3px;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+
+    bottom: 50px;
+    padding: 25px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.configs-box .footer a{
+    font-size: 20px;
+    color: var(--primary);
+    margin-right: 15px;
+}
+
+.configs-box .footer #coffee{
+    width: 50px;
+    height: 50px;
+}
+
 
