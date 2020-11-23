@@ -3,11 +3,13 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/scripts/index.js',
-    apirequest: './src/scripts/ApiRequests.js'
+    //apirequest: './src/scripts/ApiRequests.js',
+    //clock: './src/scripts/Clock.js',
+    //cookies: './src/scripts/Cookies.js'
   },
 
   output: {
-     filename: '[name].bundle.js',
+     filename: 'scripts/[name].bundle.js',
      path: path.resolve(__dirname, 'dist'),
    }, 
 

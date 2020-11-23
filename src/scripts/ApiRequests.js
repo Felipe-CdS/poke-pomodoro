@@ -13,6 +13,8 @@ async function requestAPI(pokemonId){
 }
 
 export async function addNewPokemon(pokemonId){
+    if(pokemonId == ""){return;}
+
     await requestAPI(pokemonId);
     
     var pokemonIconSpan = document.createElement("span");
