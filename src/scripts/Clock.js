@@ -70,13 +70,13 @@ export function startClock(){
     if(!clockLock){
         if(clockMode == "hunting"){
             clockMinutes = configPomodoroMinutes;
-            clockSeconds = 3;
+            clockSeconds = 0;
             clockLock = true;
             clockInterval = setInterval(clock, 1000);
         }
         else{
             clockMinutes = configBreakMinutes;
-            clockSeconds = 3;
+            clockSeconds = 0;
             clockLock = true;
             clockInterval = setInterval(clock, 1000);
         } 
