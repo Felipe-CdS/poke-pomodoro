@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 const api = axios.create({baseURL: "https://pokeapi.co/api/v2"});
 
 let urlMap = new Map();
@@ -14,6 +13,7 @@ async function requestAPI(pokemonId){
 
 export async function addNewPokemon(pokemonId){
     if(pokemonId == ""){return;}
+    setCookies(pokemonId);
 
     await requestAPI(pokemonId);
     

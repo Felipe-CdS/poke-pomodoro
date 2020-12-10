@@ -50,9 +50,7 @@ function clock(){
             document.getElementById("healing").style.display = "initial";
             document.getElementById("hunting").style.display = "none";
             
-            var x = randomId();
-            addNewPokemon(x);
-            setCookies(x);
+            addNewPokemon(randomId());
         }
         else{
             clockMode ="hunting";

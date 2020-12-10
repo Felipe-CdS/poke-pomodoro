@@ -5,7 +5,7 @@ export var pokemonIdArray = new Array();
 /*Saves a new ID in cookies*/
 export function setCookies(pokemonId){
     pokemonIdArray.push(pokemonId);
-    document.cookie = `ids=${pokemonIdArray} SameSite=Lax; Secure; Path=/;`;
+    document.cookie = `ids=${pokemonIdArray} SameSite=Lax; Secure; Path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";`;
 }
 
 
