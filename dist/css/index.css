@@ -30,7 +30,10 @@ body {
     background-size: cover;
 }
 
-#timer-div {   
+#timer-div {  
+    width: 100%;
+    height: 139px;
+     
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -49,11 +52,9 @@ body {
     position: relative;
 }
 
-
-
 #glass-buttons-div {
     width: 220px;
-    height: auto;
+    height: 160px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,15 +93,21 @@ body {
     left: -5px;
 }
 
-
 #start-button:hover, #stop-button:hover, #config-button:hover {
     background-color: var(--quinary);
+}
+
+#start-button:disabled:hover, #stop-button:disabled:hover,#config-button:disabled:hover {
+    background-color: initial;
 }
 
 #config-button.active {
     background-color: var(--quinary);
 }
 
+#config-button:disabled img{
+    opacity: 0.3;
+}
 .pokebox{
     display:flex;
     flex-direction: column;

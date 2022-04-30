@@ -38,7 +38,7 @@ function clock(){
     
     if(clockMinutes < 0){
         clockLock = false;
-
+        document.getElementById('config-button').disabled = false;
         clearInterval(clockInterval);
         
         playAlert();
@@ -72,10 +72,12 @@ function clock(){
 
 export function startClock(){
     if(!clockLock){
+        document.getElementById('config-button').disabled = true;
+
         if(clockMode == "hunting"){
             clockMinutes = configPomodoroMinutes;
             clockSeconds = 0;
-            clockLock = true;
+            clockLock = true;            
             clockInterval = setInterval(clock, 1000);
         }
         else{
@@ -89,6 +91,7 @@ export function startClock(){
 
 export function resetClock(){
     clockLock = false;
+    document.getElementById('config-button').disabled = false;
     clearInterval(clockInterval);
 
     if(clockMode == "hunting"){
