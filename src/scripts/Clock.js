@@ -104,9 +104,9 @@ export function configClock(){
         
         configPomodoroMinutes = document.getElementById("time-pomodoro").value;
         configBreakMinutes = document.getElementById("time-break").value;
-
-        if(configPomodoroMinutes > 60){configPomodoroMinutes = 60}
-        if(configBreakMinutes > 60){configBreakMinutes = 60}
+        
+        document.getElementById("pomodoro-config-label").innerHTML  = "Pomodoro: "  + configPomodoroMinutes;
+        document.getElementById("break-config-label").innerHTML     = "Break: "     + configBreakMinutes;
 
         if(clockMode == "hunting"){
             document.getElementById("timer").innerHTML = configPomodoroMinutes + ":00";

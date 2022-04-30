@@ -30,18 +30,26 @@ body {
     background-size: cover;
 }
 
-#timer-title {   
+#timer-div {   
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: 'Press Start 2P', cursive;
+}
+
+#timer-title {
     font-size: 16px;
     position: relative;
     margin-bottom: 8px;
 }
 
-#timer {   
-    font-family: 'Press Start 2P', cursive;
+#timer {
     font-size: 35px;
     position: relative;
 }
+
+
 
 #glass-buttons-div {
     width: 220px;
@@ -86,6 +94,10 @@ body {
 
 
 #start-button:hover, #stop-button:hover, #config-button:hover {
+    background-color: var(--quinary);
+}
+
+#config-button.active {
     background-color: var(--quinary);
 }
 
@@ -241,6 +253,7 @@ body {
     font-size: 15px;
     color: var(--primary);
     margin-right: 5px;
+    overflow-x: hidden;
 }
 
 .configs-box .clock-configs input {

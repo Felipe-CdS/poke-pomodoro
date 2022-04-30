@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="./css/index.css">
         <link rel="stylesheet" href="./css/nintendo-ds.css">
+        <link rel="stylesheet" href="./css/configs-div.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@500&display=swap" rel="stylesheet">
         <link href='https://css.gg/close-o.css' rel='stylesheet'>
@@ -79,8 +80,24 @@
 
                     <section class="center-part">
                         <div class="glass">
-                            <h1 id="timer-title">Time Left:</h1>
-                            <h1 id="timer">25:00</h1>
+                            <div id="timer-div">
+                                <h1 id="timer-title">Time Left:</h1>
+                                <h1 id="timer">25:00</h1>
+                            </div>
+                            <div id="configs-div">
+                                <h1>Clock Configs:</h1>
+                                <div class="config-entries">
+                                    <div>
+                                        <label for="time-pomodoro" id="pomodoro-config-label">Pomodoro: 25</label>                                      
+                                        <input type="range" min="5" max="100" step="5" value="50" id="time-pomodoro" name="time_pomodoro">
+                                    </div>
+                                    <div>
+                                        <label for="time_pomodoro" id="break-config-label">Break: 5</label>                             
+                                        <input type="range" min="5" max="60" step="5" value="10" id="time-break"    name="time-break">
+                                    </div>
+                                </div>                                
+                            </div>
+                            
                         </div>
                         <div id="glass-buttons-div">
                             <button id="start-button">Start</button>
@@ -109,19 +126,6 @@
 
         <div class="configs-box">
             <h1>Poke<br/>Pomodoro!</h1>
-            <div>
-                
-            </div>
-            <div class="clock-configs">
-                <h5>Clock Configs:</h5>
-                <div>
-                    <label for="time-pomodoro">Pomodoro:</label>
-                    <input type="number" id="time-pomodoro" step="1" min="1" max="60" name="time_pomodoro">
-                    <label for="time_pomodoro">Short Break:</label>
-                    <input type="number" id="time-break" step="1" min="1" max="60" name="time-break">
-                </div>
-                <button id="config-clock-button">Save!</button>
-            </div>
             
             <div class="music-configs">
                 <iframe width="250" height="315" src="https://www.youtube.com/embed/AvhplYM46Fc" frameborder="0"></iframe>
