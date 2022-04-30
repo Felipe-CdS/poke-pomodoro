@@ -2,6 +2,7 @@ import { addNewPokemon } from './ApiRequests'
 import { setCookies, pokemonIdArray } from './Cookies';
 
 var clockLock = false;
+var pokemonId = null;
 
 var clockMode = "hunting";
 
