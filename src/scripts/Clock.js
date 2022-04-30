@@ -51,7 +51,10 @@ function clock(){
             document.getElementById("healing").style.display = "initial";
             document.getElementById("hunting").style.display = "none";
             
-            pokemonId = randomId();
+            do{
+                pokemonId = randomId();
+            }while(pokemonIdArray.includes(pokemonId));   
+                     
             setCookies(pokemonId);
             addNewPokemon(pokemonId);
         }
