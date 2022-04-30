@@ -8,7 +8,6 @@ export function setCookies(pokemonId){
     document.cookie = `ids=${pokemonIdArray} SameSite=Lax; Secure; Path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";`;
 }
 
-
 /*Reads the array saved in cookies, parse it and add a new pokemon in the screen for each ID found on the array */
 export function startCookieSave(){
 
@@ -26,7 +25,4 @@ export function startCookieSave(){
     pokemonIdArray.forEach(id => {
         addNewPokemon(id);
     });
-
 }
-
-
